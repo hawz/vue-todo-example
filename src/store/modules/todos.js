@@ -6,7 +6,7 @@ const state = {
 
 const mutations = {
   'SET_TODOS'(state, todos) {
-    console.log('chiamata mutation SET_TODOS', todos);
+    // console.log('chiamata mutation SET_TODOS', todos);
     state.todos = todos;
   }
 };
@@ -21,13 +21,13 @@ const actions = {
       .catch(console.log);
   },
   saveTodos: ({ commit }, todos) => {
-    console.log('dispatch saveTodos:', todos);
+    // console.log('dispatch saveTodos:', todos);
     todoStorage
       .save(todos)
       .then(res => {
-        console.log('risultato del salvataggio dei todo nel LS: ', res);
+        // console.log('risultato del salvataggio dei todo nel LS: ', res);
         if (res) {
-          console.log('va qui dentro ', res);
+          // console.log('va qui dentro ', res);
           commit('SET_TODOS', todos);
         }
       })

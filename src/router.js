@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import ToDo from './components/ToDo.vue';
 
 Vue.use(Router);
 
@@ -10,14 +10,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/to-do",
       name: "to-do",
-      component: () =>
-        import("./views/ToDo.vue")
+      component: ToDo
     }
   ]
 });

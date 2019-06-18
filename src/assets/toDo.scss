@@ -311,6 +311,10 @@ button {
   }
 }
 @media (max-width: 430px) {
+  .todoapp {
+    width: 100%;
+  }
+
 	.footer {
 		height: 50px;
 	}

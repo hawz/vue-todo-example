@@ -123,7 +123,6 @@ export default {
   watch: {
     todos: {
       handler(todos) {
-        console.log("todos changed: ", todos);
         this.$store.dispatch("saveTodos", todos);
       },
       deep: true
@@ -149,6 +148,7 @@ export default {
       this.todos.splice(index, 1);
     },
     editTodo(todo) {
+      console.log('call editTodo');
       this.beforeEditCache = todo.title;
       this.editedTodo = todo;
     },

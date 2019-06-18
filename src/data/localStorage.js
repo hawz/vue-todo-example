@@ -17,10 +17,9 @@ export const todoStorage = {
   },
   save(todos) {
     return new Promise((resolve, reject) => {
-      const resSave = localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
-      console.log('resSave: ', resSave);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
       // if (resSave) {
-        resolve(true);
+      resolve(true);
       // } else {
       //   reject(false);
       // }
